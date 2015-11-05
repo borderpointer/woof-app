@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   has_many :reviews
 
+  # mount_uploader :avatar, ImageUploader
+
 end

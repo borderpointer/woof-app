@@ -5,4 +5,13 @@
 
 <h2>Reviews</h2>
 
+<% @subject.reviews.each do |review| %>
 
+    <%= review.rating %>
+    <%= review.body %>
+    <%= review.user.first_name %>
+    <%= review.user.location %>
+
+    <%= review.user_id %>
+
+ <% end %>

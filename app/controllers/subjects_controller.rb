@@ -3,6 +3,19 @@ class SubjectsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
+    @giphy = Giphy.search('funny cat', {limit: 1})
+    @giphy_first = @giphy.first
+
+    # @giphy.each do |g|
+    #   puts "======================"
+    #   puts g
+    #   puts "======================"
+    # end
+    #@test = @giphy[0]['fixed_width']['url']
+
+    puts "====================="
+    p @giphy_first['fixed_width'].url
+    puts "====================="
 
     @subjects = Subject.all
 
@@ -41,7 +54,6 @@ class SubjectsController < ApplicationController
   def show
 
     @subject = Subject.find(params[:id])
-
   end
 
 

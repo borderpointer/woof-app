@@ -29,6 +29,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 # File uploader
 gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
+# giphy api gem
+gem 'giphy'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
