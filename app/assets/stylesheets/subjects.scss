@@ -1,0 +1,64 @@
+// Place all the styles related to the subjects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.form-group {
+  font-size: 16px;
+}
+
+.general-row {
+  width: 100%;
+}
+
+.general-form {
+  text-align: center;
+  width: 50vw;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.general-form h2 {
+  padding-bottom: 30px;
+}
+
+input {
+  padding: 18px 10px;
+}
+
+input, select, textarea {
+  width: 30vw;
+}
+
+.form-control {
+  width: 30vw;
+  margin: 0 auto;
+  font-size: 16px;
+  height:60px;
+  border-radius: 0px;
+  box-shadow: none;
+  transition: none;
+  color: #333;
+}
+
+textarea:focus, input:focus, .form-control:focus {
+  background-color: #fff;
+  outline:#555 solid 1px;
+}
+
+button:focus, {
+  outline: #fff solid 0px;
+}
+
+.btn-primary {
+  background-image: none;
+  background-color: #39B7B7;
+  border-color: #39B7B7;
+  padding: 15px 0;
+  font-size: 20px;
+  text-shadow: none;
+}
+
+.btn-primary:hover {
+  background-color: #399BB7;
+  border-color: #399BB7;
+}

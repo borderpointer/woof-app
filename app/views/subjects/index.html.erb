@@ -1,0 +1,10 @@
+<% @subjects.each do |subject| %>
+
+    <%= image_tag subject.photo, :class => "profile-img"%>
+    <%= link_to "#{subject.name}", subject_path(subject.id)%>
+    <%= subject.category %>
+    <%= subject.address %>
+
+<% end %>
+
+<%= link_to "New Subject", new_subject_path %>

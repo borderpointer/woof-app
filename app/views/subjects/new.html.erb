@@ -1,0 +1,54 @@
+<div class = "general-row">
+
+    <div class = "general-form">
+
+        <h2>What Do You Want To Review?</h2>
+
+        <%= form_for @subject, :html => {:class => "form-inline"} do |f|%>
+
+            <div class="form-group">
+
+              <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
+
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+
+              <%= f.select :category, options_for_select(@category, selected = "Parks "), {:include_blank => "All"}, { :class => 'form-control' } %>
+
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+
+              <%= f.text_field :address, class: 'form-control', placeholder: "Address, if any" %>
+
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+
+              <%= f.text_field :photo, class: 'form-control', placeholder: "Photo URL" %>
+
+            </div>
+
+            <br><br>
+
+            <br><br>
+
+            <div class="actions">
+
+                <%= f.submit "Create", :class => "btn btn-primary btn-md" %>
+
+            </div>
+
+
+        <% end %>
+
+    </div>
+
+</div>

@@ -1,0 +1,153 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "hello.scss";
+@import "subjects.scss";
+
+*{
+   -webkit-font-smoothing: antialiased;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: 0;
+}
+
+header {
+  width: 100vw;
+  padding:12px 0;
+  margin: 0 auto;
+  background-color: #A53B3A;
+}
+
+.header-nav {
+  padding: 0 50px;
+}
+
+.logo-link {
+  padding-left: 20px;
+}
+
+.logo {
+  width: 115px;
+}
+
+.nav-links {
+  float: right;
+  display: inline-block;
+  padding: 11px 0;
+}
+
+.nav-links>a {
+  display: inline-block;
+  padding: 9px 20px;
+  font-size: .9em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:rgba(255,255,255,.5);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.nav-links>a:hover {
+  transition: all .3s ease;
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+}
+
+.nav-links>p {
+  display: inline-block;
+  padding: 9px 15px;
+  font-size: .9em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:#fff;
+  letter-spacing: 1px;
+}
+
+.login-form {
+  display: inline-block;
+}
+
+.login-form > input {
+  width: 180px;
+  padding: 6px 12px;
+  font-size: .95em;
+  margin: 0 10px;
+  border: 1px solid #777;
+}
+
+
+.login-form > input:focus {
+  border: 1px solid #333;
+}
+
+#user_remember_me {
+  width: 10px;
+}
+
+.login-form > .header-login-btn {
+  padding: 5px 12px;
+  font-size: 1em;
+  margin: 0 10px;
+  width: 100px;
+  background-color: #CCC106;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  transition: all .25s ease;
+}
+
+.login-form > .header-login-btn:hover {
+  background-color: #639CC8;
+}
+
+.login-form > .header-signup-btn {
+  padding: 7px 25px;
+  font-size: 1em;
+  margin: 0 10px;
+  width: 100px;
+  background-color: #CCC106;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  transition: all .25s ease;
+}
+
+.login-form > .header-signup-btn:hover {
+  background-color: #639CC8;
+}
+
+.login-form > #forgot-pw, .login-form > label {
+  text-decoration: none;
+  font-size: .9em;
+  color: #fff;
+  opacity: .8;
+  font-weight: bold;
+}
+
+.login-form > #forgot-pw {
+  padding-left: 88px;
+}
+
+.login-form >#forgot-pw:hover {
+  opacity: 1;
+}
