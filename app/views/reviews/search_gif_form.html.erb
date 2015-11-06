@@ -1,0 +1,11 @@
+<h2>Woof do you think about this <%= @subject.category.singularize.downcase %>?</h2>
+
+<form action = "/subjects/<%= params[:subject_id] %>/reviews/new/2" method = "post">
+
+    <input type="hidden" name="_method" value="post">
+
+    <input type="text" name="search_terms" placeholder="Search for a gif">
+
+    <input type="submit" value= "Search GIF">
+
+</form>

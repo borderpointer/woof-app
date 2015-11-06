@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
+  post '/rate' => 'rater#create', :as => 'rate'
   # landing
   root 'subjects#index'
 
-  # about
-  get 'hello/about'
+  # series of routes for the review process
+  get '/subjects/:subject_id/reviews/new/2' => 'reviews#search_gif_form', as: "review_2"
+  post '/subjects/:subject_id/reviews/new/2' => 'reviews#search_gif', as: "review_2_post"
+  get '/subjects/:subject_id/reviews/new/3' => 'reviews#search_gif_results', as: "review_3"
+  get '/subjects/:subject_id/reviews/new/4' => 'reviews#submit_form', as: "review_4"
 
   # user authentication
   devise_for :users, controllers: { registrations: "registrations"}
@@ -16,7 +20,6 @@ Rails.application.routes.draw do
     resources :reviews
 
   end
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

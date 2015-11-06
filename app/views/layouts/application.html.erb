@@ -16,6 +16,22 @@
 
 <body>
 
+    <div class = "messages">
+
+        <% if notice %>
+
+          <p class="alert alert-success"><%= notice %></p>
+
+        <% end %>
+
+        <% if alert %>
+
+          <p class="alert alert-danger"><%= alert %></p>
+
+        <% end %>
+
+    </div>
+
     <header>
 
         <nav class = "header-nav">
@@ -60,22 +76,6 @@
     </header>
 
     <div class = "container-fluid">
-
-        <div class = "messages">
-
-            <% if notice %>
-
-              <p class="alert alert-success"><%= notice %></p>
-
-            <% end %>
-
-            <% if alert %>
-
-              <p class="alert alert-danger"><%= alert %></p>
-
-            <% end %>
-
-        </div>
 
         <%= yield %>
 

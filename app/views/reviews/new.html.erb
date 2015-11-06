@@ -1,2 +1,6 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class = "paws">
+<h2>How many pawfives do you give this <%= @subject.category.singularize.downcase %>?</h2>
+<%= rating_for @subject, "quality" %>
+<div id = "paws-message"></div>
+</div>
+<%= link_to "Next", review_2_path(params[:subject_id]) %>

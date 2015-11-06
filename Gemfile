@@ -33,7 +33,10 @@ gem 'mini_magick'
 gem 'fog'
 
 # giphy api gem
-gem 'giphy'
+gem "motion-giphy"
+
+# gem for raty jquery plugin
+gem 'ratyrate'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
