@@ -4,9 +4,6 @@ class SubjectsController < ApplicationController
 
   def index
 
-    # @giphy = Giphy.search('funny cat', {limit: 1})
-    # @giphy_first = @giphy.first.embed_url
-
     @subjects = Subject.all
 
   end

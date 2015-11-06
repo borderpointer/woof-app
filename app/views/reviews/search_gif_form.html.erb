@@ -9,3 +9,24 @@
     <input type="submit" value= "Search GIF">
 
 </form>
+
+
+<% if @gif != nil %>
+
+    <%= image_tag @gif %>
+
+    <form action = "/subjects/<%= params[:subject_id] %>/reviews" method = "post">
+
+        <input type="hidden" name="_method" value="post">
+
+        <input type="hidden" name="rating" value="1">
+        <input type="hidden" name="body" value="<%= @gif %>">
+        <input type="hidden" name="user_id" value = "<%= current_user.id %>">
+
+        Are you happy with the gif?
+
+        <input type="submit" value="Yes, submit as my review">
+
+    </form>
+
+<% end %>

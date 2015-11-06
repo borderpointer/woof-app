@@ -1,3 +1,5 @@
+ruby "2.2.3"
+
 source 'https://rubygems.org'
 
 
@@ -27,16 +29,17 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # User Authentication
 gem 'devise'
+
 # File uploader
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
 
-# giphy api gem
-gem "motion-giphy"
-
 # gem for raty jquery plugin
 gem 'ratyrate'
+
+# for using Giphy's API
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -59,4 +62,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
+
 

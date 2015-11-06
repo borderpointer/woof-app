@@ -15,52 +15,41 @@ class ReviewsController < ApplicationController
 
   def search_gif_form
 
+    @review = Review.new
+    puts "==================="
+    p params[:score]
+    p params[:score].class
+    puts "==================="
+
     @subject = Subject.find(params[:subject_id])
     session[:rating] = params[:score]
-    puts "-----------------------"
-    p session[:rating]
-    puts "-----------------------"
+    # puts "-----------------------"
+    # p session[:rating]
+    # puts "-----------------------"
 
   end
 
 
   def search_gif
 
+    @review = Review.new
+
     if params[:search_terms] != nil
 
-      MotionGiphy::Client.search(params[:search_terms]) do |response|
+      original_search_terms = params[:search_terms]
+      formatted_search_terms = params[:search_terms].split(" ").join("+")
 
-      if response.success?
+      response = HTTParty.get("http://api.giphy.com/v1/gifs/translate?s=" + formatted_search_terms + "&rating=pg-13" + "&api_key=" + Rails.application.secrets.giphy_access_key)
 
-        gifs = response.data
+      @gif = response['data']['images']['original']['url']
 
-        gif = response.data.first
+      session[:chosen_gif] = @gif
 
-        puts gif.id
-        puts gif.giphy_url
+      @subject = Subject.find(params[:subject_id])
 
-        # Returns a MotionGiphy::Image
-        puts gif.fixed_width.url
+      render :search_gif_form
+      # render :partial => 'search_results'
 
-        return gifs
-
-      else
-
-        puts response.error.message
-
-      end
-
-    end
-
-    puts "===================="
-    p gifs
-    puts "===================="
-
-    @gifs = gifs
-
-    session[:chosen_gif] = params[:chosen_gif]
-
-    render :partial => 'search_results'
 
     end
 
@@ -68,7 +57,6 @@ class ReviewsController < ApplicationController
 
 
   def search_gif_results
-
   end
 
 
@@ -80,16 +68,15 @@ class ReviewsController < ApplicationController
   def create
 
     @review = Review.new(review_params)
-    @review.subject_id = params[:id]
-    @review.user_id = current_user.id
+    @review.subject_id = params[:subject_id]
 
     if @review.save
 
-      redirect_to subject_path(params[:id])
+      redirect_to subject_path(params[:subject_id])
 
     else
 
-      redirect_to subject_path(params[:id])
+      redirect_to subject_path(params[:subject_id])
 
     end
 
@@ -122,7 +109,7 @@ class ReviewsController < ApplicationController
 
   def review_params
 
-    params.require(:review).permit(:rating, :body)
+    params.require(:review).permit(:rating, :body, :subject_id, :user_id)
 
   end
 
