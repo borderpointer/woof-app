@@ -4,9 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  ratyrate_rater
-  has_many :reviews
 
-  # mount_uploader :avatar, ImageUploader
+  mount_uploader :avatar, ImageUploader
+
+  has_many :reviews
 
 end

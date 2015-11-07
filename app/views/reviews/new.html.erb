@@ -1,6 +1,33 @@
-<div class = "paws">
-<h2>How many pawfives do you give this <%= @subject.category.singularize.downcase %>?</h2>
-<%= rating_for @subject, "quality" %>
-<div id = "paws-message"></div>
-</div>
-<%= link_to "Next", review_2_path(params[:subject_id]) %>
+<h2>Woof do you think about this <%= @subject.category.singularize.downcase %>?</h2>
+
+<form action = "/subjects/<%= params[:subject_id] %>/reviews/new/2" method = "post">
+
+    <input type="hidden" name="_method" value="post">
+
+    <input type="text" name="text_response" placeholder="Search for a gif">
+
+    <input type="submit" value= "Search GIF">
+
+</form>
+
+
+<% if @gif != nil %>
+
+    <%= image_tag @gif %>
+
+    <form action = "/subjects/<%= params[:subject_id] %>/reviews" method = "post">
+
+        <input type="hidden" name="_method" value="post">
+
+        <input type="hidden" name="review[text_response]" value="<%= @text_response %>">
+        <input type="hidden" name="review[gif_response]" value="<%= @gif %>">
+        <input type="hidden" name="review[subject_id]" value = "<%= params[:subject_id].to_s %>">
+        <input type="hidden" name="review[user_id]" value = "<%= current_user.id.to_s %>">
+
+        Are you happy with the gif?
+
+        <input type="submit" value="Yes, submit as my review">
+
+    </form>
+
+<% end %>

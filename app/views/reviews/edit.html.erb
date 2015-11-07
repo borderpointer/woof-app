@@ -1,2 +1,33 @@
-<h1>Reviews#edit</h1>
-<p>Find me in app/views/reviews/edit.html.erb</p>
+<h2>Yoof want to edit this <%= @subject.category.singularize.downcase %>?</h2>
+
+<form action = "/subjects/<%= params[:subject_id] %>/reviews/edit/2" method = "post">
+
+    <input type="hidden" name="_method" value="post">
+
+    <input type="text" name="text_response" placeholder="Search for a gif">
+    <input type="hidden" name="review_id" value="<%= @review.id %>">
+
+    <input type="submit" value= "Search GIF">
+
+</form>
+
+<% if @gif != nil %>
+
+    <%= @review_id%>
+
+    <%= image_tag @gif %>
+
+    <form action = "/subjects/<%= params[:subject_id] %>/reviews/<%= @review.id %>" method = "post">
+
+        <input type="hidden" name="_method" value="put">
+
+        <input type="hidden" name="review[text_response]" value="<%= @text_response %>">
+        <input type="hidden" name="review[gif_response]" value="<%= @gif %>">
+
+        Are you hawpy with this gif now?
+
+        <input type="submit" value="Update My Review">
+
+    </form>
+
+<% end %>

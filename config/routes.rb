@@ -1,14 +1,11 @@
 Rails.application.routes.draw do
 
-  post '/rate' => 'rater#create', :as => 'rate'
   # landing
   root 'subjects#index'
 
-  # series of routes for the review process
-  get '/subjects/:subject_id/reviews/new/2' => 'reviews#search_gif_form', as: "review_2"
-  post '/subjects/:subject_id/reviews/new/2' => 'reviews#search_gif', as: "review_2_post"
-  get '/subjects/:subject_id/reviews/new/3' => 'reviews#search_gif_results', as: "review_3"
-  get '/subjects/:subject_id/reviews/new/4' => 'reviews#submit_form', as: "review_4"
+  # these routes are needed for making a request to Giphy's API
+  post '/subjects/:subject_id/reviews/new/2' => 'reviews#search_gif', as: "search_gif"
+  post '/subjects/:subject_id/reviews/edit/2' => 'reviews#edit_gif', as: "edit_gif"
 
   # user authentication
   devise_for :users, controllers: { registrations: "registrations"}

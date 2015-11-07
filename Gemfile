@@ -31,12 +31,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 
 # File uploader
-gem 'carrierwave'
+gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
-gem 'fog'
-
-# gem for raty jquery plugin
-gem 'ratyrate'
+gem "fog"
 
 # for using Giphy's API
 gem 'httparty'

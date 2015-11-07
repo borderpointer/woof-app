@@ -1,13 +1,22 @@
-# CarrierWave.configure do |config|
-# byebug
-# config.fog_credentials = {
+CarrierWave.configure do |config|
 
-#     :provider                         => 'Google',
-#     :google_storage_access_key_id     => Rails.application.secrets.google_storage_access_key_id,
-#     :google_storage_secret_access_key => Rails.application.secrets.google_storage_secret_access_key
+config.fog_credentials = {
 
-#     }
+    :provider                         => "Google",
+    :google_storage_access_key_id     => Rails.application.secrets.google_access_key,
+    :google_storage_secret_access_key => Rails.application.secrets.google_secret,
 
-#     config.fog_directory = 'woof_app'
+    }
 
-# end
+    config.fog_directory = "woofwoof"
+
+end
+puts "================"
+p ENV["GCS_ACCESS_KEY"]
+puts "================"
+p ENV["GCS_SECRET"]
+puts "================"
+
+
+p Rails.application.secrets.google_access_key
+puts "================"

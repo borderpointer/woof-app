@@ -7,12 +7,23 @@
 
 <% @subject.reviews.each do |review| %>
 
-    <%= review.rating %>
-    <%= review.body %>
+    <%= image_tag review.gif_response %>
+    <br>
+    "<%= review.text_response %>"
+    <br>
     <%= review.user.first_name %>
+    <br>
     <%= review.user.location %>
+    <br>
 
-    <%= review.user_id %>
+    <% if review.user_id == current_user.id %>
+
+        <%= link_to "Edit Review", edit_subject_review_path(review.subject_id, review.id) %>
+        <br>
+        <%= link_to "Delete Review", subject_review_path(review.subject_id, review.id), data: {confirm: "Ya sure..?"}, method: :delete %>
+        <br>
+
+    <% end %>
 
  <% end %>
 
