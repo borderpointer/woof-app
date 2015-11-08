@@ -2,16 +2,21 @@
 
 === Built With:
 
-• Rails
+* Rails
 
 === Gems Used:
 
-• Postgresql<br>
-• Bootstrap-Sass<br>
-• Devise<br>
-• Carrierwave<br>
-• Fog<br>
-• HTTParty<br>
+* Postgresql
+* Bootstrap-Sass
+* Devise
+* Carrierwave
+* Fog
+* HTTParty
+
+== APIs Used:
+
+* Giphy
+* Google Cloud Storage
 
 === Synopsis
 
