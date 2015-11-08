@@ -1,36 +1,36 @@
 = Woof
 
-== Built With:
+=== Built With:
 
 • Rails
 
-== Gems Used:
+=== Gems Used:
 
-• Postgresql
-• Bootstrap-Sass
-• Devise
-• Carrierwave
-• Fog
-• HTTParty
+• Postgresql<br>
+• Bootstrap-Sass<br>
+• Devise<br>
+• Carrierwave<br>
+• Fog<br>
+• HTTParty<br>
 
-== Synopsis
+=== Synopsis
 
 Woof is the Yelp for dogs, where users can review all things related to dogs with gifs.
 
-== Motivation
+=== Motivation
 
 I wanted to build a fun app.
 
-== Installation
+=== Installation
 
 Demo coming soon.
 
-== Unsolved Problems
+=== Unsolved Problems
 
 When users are searching for a gif, if there are no gifs with the keywords entered, the program will return an error.
 
 
-== Future Improvements
+=== Future Improvements
 
 ==== I want to:
 
