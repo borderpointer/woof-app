@@ -1,28 +1,37 @@
-== README
+== Woof
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With:
 
-Things you may want to cover:
+• Rails <br>
 
-* Ruby version
+## Gems Used:
 
-* System dependencies
+• Postgresql <br>
+• Bootstrap-Sass <br>
+• Devise <br>
+• Carrierwave <br>
+• Fog <br>
+• HTTParty <br>
 
-* Configuration
+## Synopsis
 
-* Database creation
+Woof is the Yelp for dogs, where users can review all things related to dogs with gifs.
 
-* Database initialization
+## Motivation
 
-* How to run the test suite
+I wanted to build a fun app.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Installation
 
-* Deployment instructions
+Demo coming soon.
 
-* ...
+## Unsolved Problems
+
+When users are searching for a gif, if there are no gifs with the keywords entered, the program will return an error.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Future Improvements
+
+#### I want to:
+
+• Add a validation that detects if a new user's photo is of a dog or not.
