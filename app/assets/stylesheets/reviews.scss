@@ -2,15 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.paws{
-    text-align: center;
+.search-terms {
+    padding: 0 80px;
+    line-height: 1.5;
 }
 
-.star > img {
-    width: 100px;
-    padding: 0 15px
-}
-
-.raty-cancel {
-    display: none;
+.search-result {
+    padding-top: 10px;
+    text-align:center;
 }

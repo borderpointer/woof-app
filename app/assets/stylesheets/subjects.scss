@@ -2,63 +2,180 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.form-group {
-  font-size: 16px;
+.jumbo-1 {
+  background: url(featured-product.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  padding: 50px 0;
+  height: 450px;
 }
 
-.general-row {
-  width: 100%;
-}
-
-.general-form {
+#text-1 {
+  vertical-align: middle;
+  border: 10px solid #fff;
+  padding: 30px;
+  margin: 50px auto;
+  width: 800px;
   text-align: center;
-  width: 50vw;
-  margin: 0 auto;
-  padding: 40px 0;
+  color: #fff;
 }
 
-.general-form h2 {
-  padding-bottom: 30px;
+.jumbo-1 > #featured-1 {
+  font-size: 5em;
+  font-weight: 700;
 }
 
-input {
-  padding: 18px 10px;
+.jumbo-1 > #featured-1-sub {
+  font-size: 3em;
+  font-weight: 700;
 }
 
-input, select, textarea {
-  width: 30vw;
-}
-
-.form-control {
-  width: 30vw;
-  margin: 0 auto;
-  font-size: 16px;
-  height:60px;
-  border-radius: 0px;
-  box-shadow: none;
+#jumbo-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.25em;
   transition: none;
+}
+
+#jumbo-link:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.jumbo-2 {
+  background-color: #A53B3A;
+  background-size: cover;
+  margin: 0;
+  padding: 40px 0;
+  height: 600px;
+}
+
+#text-2 {
+  vertical-align: middle;
+  padding: 30px;
+  margin: 50px auto;
+  width: 800px;
+  text-align: center;
+  color: #fff;
+}
+
+#featured-2 {
+  font-size: 20em;
+  color: #fff;
+}
+
+#text-3 {
+  vertical-align: middle;
+  padding: 30px;
+  margin: 0 auto;
+  width: 90vw;
+  text-align: center;
   color: #333;
 }
 
-textarea:focus, input:focus, .form-control:focus {
+.jumbo-3 {
   background-color: #fff;
-  outline:#555 solid 1px;
+  background-size: cover;
+  margin: 0;
+  padding: 50px 0;
 }
 
-button:focus, {
-  outline: #fff solid 0px;
+#featured-2-1 {
+  font-size: 7em;
+  padding: 0 0 50px 0;
 }
 
-.btn-primary {
-  background-image: none;
-  background-color: #39B7B7;
-  border-color: #39B7B7;
+#featured-2-sub {
+  font-size: 4em;
+  padding: 0 150px;
+  line-height: 1.25;
+}
+
+#featured-2-sub-sub {
+  font-size: 2em;
+  padding: 50px 125px;
+  line-height: 1.5;
+}
+
+.subjects-row {
   padding: 15px 0;
-  font-size: 20px;
-  text-shadow: none;
+  width: 92vw;
+  margin: 0 auto;
 }
 
-.btn-primary:hover {
-  background-color: #399BB7;
-  border-color: #399BB7;
+.thumbnail {
+  border-radius: 0px;
+  padding: 15px;
+  border: 1px solid #E8E8E8;
+}
+
+#start-new-review {
+  line-height: 1.25;
+  text-align: center;
+  padding: 10px;
+}
+
+.subject-h4 {
+  padding-top: 5px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.tests-row {
+  width: 85vw;
+  margin: 30px auto;
+}
+
+.test-photos {
+  width: 75%;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+  padding: 15px 0;
+}
+
+.img-src {
+  font-size: .8em;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.quote {
+  font-size: 1.4em;
+  line-height: 1.4;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.author {
+  font-size: 1.25em;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.info-container {
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0;
+}
+
+.subject-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  max-height: 500px;
+}
+
+.reviews-container {
+  padding: 50px 70px;
+  background-color: #f6f6f6;
+}
+
+.reviews-thumbnail {
+  background-color: #f6f6f6;
+  padding:0;
+  border-radius: 0px;
+  border: none;
 }

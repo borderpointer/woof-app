@@ -1,32 +1,106 @@
-<%= image_tag @subject.photo, :class => "profile-img"%>
-<%= @subject.name %>
-<%= @subject.category %>
-<%= @subject.address %>
+<div class = "container-fluid" style="background-color: #fff;">
 
-<h2>Reviews</h2>
+    <div class = "info-container">
 
-<% @subject.reviews.each do |review| %>
-
-    <%= image_tag review.gif_response %>
-    <br>
-    "<%= review.text_response %>"
-    <br>
-    <%= image_tag review.user.avatar %>
-    <br>
-    <%= review.user.first_name %>
-    <br>
-    <%= review.user.location %>
-    <br>
-
-    <% if review.user_id == current_user.id %>
-
-        <%= link_to "Edit Review", edit_subject_review_path(review.subject_id, review.id) %>
+        <%= image_tag @subject.photo, class: "subject-img"%>
         <br>
-        <%= link_to "Delete Review", subject_review_path(review.subject_id, review.id), data: {confirm: "Ya sure..?"}, method: :delete %>
-        <br>
+        <h1><%= @subject.name %></h1>
+        <h4><%= @subject.address %></h4>
 
-    <% end %>
+    </div>
 
- <% end %>
+    <div class = "reviews-container">
 
- <%= link_to "New Review", new_subject_review_path(@subject.id) %>
+        <h2 style="padding-left: 15px;">Reviews</h2>
+
+
+        <div class = "row subjects-row">
+
+        <% @subject.reviews.each do |review| %>
+
+            <div class = "col-sm-6 col-md-3">
+
+                <div class = "thumbnail reviews-thumbnail">
+
+                <%= image_tag review.gif_response, style: "display:inline-block;" %>
+
+                <h1 style="font-size: 2em;">"<%= review.text_response %>"</h1>
+
+                <br>
+
+                <div class = "profile-container", style="width: 100px; height: 100px; margin: 0; display:inline-block;">
+
+                    <%= image_tag review.user.avatar, class: "avatar" %>
+
+                </div>
+
+                <br><br>
+
+                <h4><%= review.user.first_name %>, <%= review.user.location %></h4>
+
+                <br>
+
+                <% if user_signed_in? && review.user_id == current_user.id %>
+
+                    <%= link_to "Edit Review", edit_subject_review_path(review.subject_id, review.id) %>
+                    <br>
+                    <%= link_to "Delete Review", subject_review_path(review.subject_id, review.id), data: {confirm: "Ya sure..?"}, method: :delete %>
+                    <br>
+
+                <% end %>
+
+                </div>
+
+            </div>
+
+         <% end %>
+
+            <% if user_signed_in? %>
+
+                <div class = "col-sm-6 col-md-3">
+
+                <br>
+
+                    <%= link_to "Writt A New Review", new_subject_review_path(@subject.id), class: "btn btn-primary btn-md", style: "padding: 20px;" %>
+
+                </div>
+
+
+         </div>
+
+            <% else %>
+
+            <div class = "col-md-12" style="padding: 30px 15px; background-color: #A53B3A;">
+
+            <h3 style="padding-left: 15px; color: #fff">You muwst be logged in to writt a review</h3>
+
+            <br>
+
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "login-form"}) do |f| %>
+
+                <%= f.email_field :email, autofocus: true, placeholder: "Email" %>
+                <%= f.password_field :password, autocomplete: "off", placeholder: "Password" %>
+                <%= f.submit "Log in" , class: "header-login-btn" %>
+                <%= link_to "Sign Up", new_user_registration_path, class: "header-signup-btn" %>
+
+                <br>
+
+                <% if devise_mapping.rememberable? -%>
+
+                  <hr style="height: 1px; margin: 0; border: 0;">
+                  <%= f.check_box :remember_me, id: "remember-checkbox"%>
+                  <%= f.label :remember_me %>
+
+                <% end -%>
+
+                <%= link_to "Forgot Password", new_user_password_path, id: "forgot-pw" %>
+
+            <% end %>
+
+            <% end %>
+
+            </div>
+
+    </div>
+
+</div>

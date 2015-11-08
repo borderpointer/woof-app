@@ -1,33 +1,51 @@
-<h2>Yoof want to edit this <%= @subject.category.singularize.downcase %>?</h2>
+<div class = "container-fluid">
 
-<form action = "/subjects/<%= params[:subject_id] %>/reviews/edit/2" method = "post">
+    <div class = "general-row">
 
-    <input type="hidden" name="_method" value="post">
+        <div class = "general-form">
 
-    <input type="text" name="text_response" placeholder="Search for a gif">
-    <input type="hidden" name="review_id" value="<%= @review.id %>">
+            <h2>Edit Yaw Review</h2>
 
-    <input type="submit" value= "Search GIF">
+            <form action = "/subjects/<%= params[:subject_id] %>/reviews/edit/2" class = "form-inline" method = "post">
 
-</form>
+                <input type="hidden" name="_method" value="post">
 
-<% if @gif != nil %>
+                <input type="text" name="text_response" placeholder="Search fo any gif (Use real English)" class ="form-control" style="width: 30vw;">
 
-    <%= @review_id%>
+                <input type="hidden" name="review_id" value="<%= @review.id %>">
 
-    <%= image_tag @gif %>
+                <br><br>
 
-    <form action = "/subjects/<%= params[:subject_id] %>/reviews/<%= @review.id %>" method = "post">
+                <button type="submit" class="btn btn-primary btn-md" style="width: 30vw;"><span class='glyphicon glyphicon-search'></button>
 
-        <input type="hidden" name="_method" value="put">
+            </form>
 
-        <input type="hidden" name="review[text_response]" value="<%= @text_response %>">
-        <input type="hidden" name="review[gif_response]" value="<%= @gif %>">
+            <% if @gif != nil %>
 
-        Are you hawpy with this gif now?
+                <br><br>
+                <br><br>
 
-        <input type="submit" value="Update My Review">
+                <%= @review_id%>
 
-    </form>
+                <%= image_tag @gif %>
 
-<% end %>
+                <form action = "/subjects/<%= params[:subject_id] %>/reviews/<%= @review.id %>" class = "form-inline" method = "post">
+
+                    <input type="hidden" name="_method" value="put">
+
+                    <input type="hidden" name="review[text_response]" value="<%= @text_response %>">
+                    <input type="hidden" name="review[gif_response]" value="<%= @gif %>">
+
+                    <h3 class="search-result">Are you hawpy with dis gif?</h3><br>
+
+                    <input type="submit" value="Yaas update ma review" class="btn btn-primary btn-md">
+
+                </form>
+
+            <% end %>
+
+        </div>
+
+    </div>
+
+</div>

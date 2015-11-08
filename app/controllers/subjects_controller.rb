@@ -4,7 +4,7 @@ class SubjectsController < ApplicationController
 
   def index
 
-    @subjects = Subject.all
+    @subjects = Subject.order('category DESC')
 
   end
 
@@ -43,7 +43,10 @@ class SubjectsController < ApplicationController
     @subject = Subject.find(params[:id])
     @review = Review.new
     @review.subject_id = @subject.id
-    @review.user_id = current_user.id
+
+    if user_signed_in?
+      @review.user_id = current_user.id
+    end
 
   end
 

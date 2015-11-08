@@ -1,10 +1,174 @@
-<% @subjects.each do |subject| %>
+<div class="jumbotron jumbo-1">
 
-    <%= image_tag subject.photo, :class => "profile-img"%>
-    <%= link_to "#{subject.name}", subject_path(subject.id)%>
-    <%= subject.category %>
-    <%= subject.address %>
+    <div id = "text-1">
 
-<% end %>
+        <h1 id = "featured-1">Featured:</h1>
+        <h2 id = "featured-1-sub">Best Rated Toy on Woof</h2>
+        <%= link_to "Check It Out >", subject_path(7), id: "jumbo-link" %>
 
-<%= link_to "New Subject", new_subject_path %>
+    </div>
+
+</div>
+
+<div class = "container-fluid">
+
+    <div class = "row subjects-row">
+
+        <h2 style = "padding-left: 15px;">Parks</h2>
+
+        <% @subjects.each do |subject| %>
+
+            <% if subject.category == "Parks" %>
+
+                <div class = "col-sm-6 col-md-3">
+
+                    <div class = "thumbnail">
+
+                        <a href="/subjects/<%= subject.id %>"><%= image_tag subject.photo%></a>
+
+                        <h4 class = "subject-h4"><%= link_to "#{subject.name}", subject_path(subject.id)%></h4 class = "subject-h4">
+
+                    </div>
+
+                </div>
+
+            <% end %>
+
+        <% end %>
+
+    </div>
+
+    <div class = "row subjects-row">
+
+        <h2 style = "padding-left: 15px;">Food</h2>
+
+        <% @subjects.each do |subject| %>
+
+            <% if subject.category == "Food" %>
+
+                <div class = "col-sm-6 col-md-3">
+
+                    <div class = "thumbnail">
+
+                        <a href="/subjects/<%= subject.id %>"><%= image_tag subject.photo%></a>
+
+                        <h4 class = "subject-h4"><%= link_to "#{subject.name}", subject_path(subject.id)%></h4 class = "subject-h4">
+
+                    </div>
+
+                </div>
+
+            <% end %>
+
+        <% end %>
+
+    </div>
+
+    <div class = "row subjects-row">
+
+        <h2 style = "padding-left: 15px;">Toys</h2>
+
+        <% @subjects.each do |subject| %>
+
+            <% if subject.category == "Toys" %>
+
+                <div class = "col-sm-6 col-md-3">
+
+                    <div class = "thumbnail">
+
+                        <a href="/subjects/<%= subject.id %>"><%= image_tag subject.photo%></a>
+
+                        <h4 class = "subject-h4"><%= link_to "#{subject.name}", subject_path(subject.id)%></h4 class = "subject-h4">
+
+                    </div>
+
+                </div>
+
+            <% end %>
+
+        <% end %>
+
+        <div class = "col-sm-6 col-md-3">
+
+            <div class = "thumbnail">
+
+                <h3 id = "start-new-review">Don't see anything you want to review?</h3>
+                <h4 class = "subject-h4"><%= link_to "Add a New Subject", new_subject_path %></h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="jumbotron jumbo-2">
+
+    <div id = "text-2">
+
+        <h1 id = "featured-2">Yes.</h1>
+
+    </div>
+
+</div>
+
+<div class="jumbotron jumbo-3">
+
+    <div id = "text-3">
+
+        <h1 id = "featured-2-1">You've guessed it.</h1>
+        <h2 id = "featured-2-sub">Finally, dogs have a place to voice their opinions.</h2>
+        <p id = "featured-2-sub-sub">
+        We are Woof, a Yelp for dogs, serving honest and accurate reviews of all things dogs like, by dogs. Our strict policy only allows dogs to sign up to ensure the legitimacy of each review (humans lie!). Currently, we only serve dogs of New York City, but we are working to expand to other cities in the future.
+        </p>
+
+    </div>
+
+</div>
+
+<div class = "container-fluid">
+
+    <div class = "row tests-row">
+
+        <div class="col-sm-6 col-md-4" style = "padding: 50px 30px;">
+
+            <img class = "test-photos" src = "http://bit.ly/1S7pvIL">
+            <p class = "img-src">Image courtsey of<br>
+            <a href="https://instagram.com/tunameltsmyheart/" target="_blank">@tunameltsmyheart</a></p>
+
+            <h4 class = "quote">"I love Woof! If I'm checking out a park or trying a new food, I always make sure to check and see what others have said about it before I try it. Truly a revolutionary site and a big win for dogs!"</h4>
+            <h5 class = "author">– Tuna, <a href="https://instagram.com/tunameltsmyheart/" target="_blank">@tunameltsmyheart</a></h5>
+
+        </div>
+
+        <div class="col-sm-6 col-md-4" style = "padding: 50px 30px;">
+
+            <img class = "test-photos" src = "http://bit.ly/1Nj0czY">
+            <p class = "img-src">Image courtsey of<br>
+            <a href="https://instagram.com/mensweardog/" target="_blank">@mensweardog</a></p>
+
+            <h4 class = "quote">"Woof is the best. For a city pooch like me, it is very important for me to know beforehand how a restaurant is. Woof is the perfect place for me to see what eateries are good and avoid the atrocities of bad food. After all, I am an exquisite connoisseur."</h4>
+            <h5 class = "author">– Bodhi, <a href="https://instagram.com/mensweardog/ target="_blank"">@mensweardog</a></h5>
+
+        </div>
+
+        <div class="col-sm-6 col-md-4" style = "padding: 50px 30px;">
+
+            <img class = "test-photos" src = "http://bit.ly/1HlAoGB">
+            <p class = "img-src">Image courtsey of<br>
+            <a href="https://instagram.com/realgrumpycat/" target="_blank">@realgrumpycat</a></p>
+
+            <h4 class = "quote">"Woof sucks! I hate all dogs. Actually, I hate everything in life. Everything sucks!"</h4>
+            <h5 class = "author">– Tardar Sauce, <a href="https://instagram.com/realgrumpycat/" target="_blank">@realgrumpycat</a></h5>
+
+        </div>
+
+    <div>
+
+</div>
+
+</div>
+
+</div>
+

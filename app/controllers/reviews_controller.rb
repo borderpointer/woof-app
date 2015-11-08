@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
     if params[:text_response] != nil
 
       original_search_terms = params[:text_response]
-      formatted_search_terms = params[:text_response].gsub(/\s+/,'+')
+      formatted_search_terms = params[:text_response].gsub(/\s+'!'+'?'/,'+')
 
       response = HTTParty.get("http://api.giphy.com/v1/gifs/translate?s=" + formatted_search_terms + "&rating=pg-13" + "&api_key=" + Rails.application.secrets.giphy_access_key)
 

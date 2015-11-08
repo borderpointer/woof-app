@@ -12,17 +12,13 @@
 
   <%= favicon_link_tag 'favicon.ico' %>
 
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
 
     <div class = "messages">
-
-        <% if notice %>
-
-          <p class="alert alert-success"><%= notice %></p>
-
-        <% end %>
 
         <% if alert %>
 
@@ -58,7 +54,7 @@
                     <% if devise_mapping.rememberable? -%>
 
                       <hr style="height: 1px; margin: 0; border: 0;">
-                      <%= f.check_box :remember_me %>
+                      <%= f.check_box :remember_me, id: "remember-checkbox" %>
                       <%= f.label :remember_me %>
 
                     <% end -%>
@@ -75,12 +71,16 @@
 
     </header>
 
-    <div class = "container-fluid">
+    <%= yield %>
 
-        <%= yield %>
+    <footer>
 
-    </div>
+        <p class="copyright">&copy; 2015 Woof. All Rights Reserved.</p>
+        <p class="credit">Made with &#9829; by <a href="http://e-l.li" target="_blank">Elli</a> in NYC.</p>
+
+    </footer>
 
 </body>
+
 
 </html>

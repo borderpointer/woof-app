@@ -1,33 +1,51 @@
-<h2>Woof do you think about this <%= @subject.category.singularize.downcase %>?</h2>
+<div class = "container-fluid">
 
-<form action = "/subjects/<%= params[:subject_id] %>/reviews/new/2" method = "post">
+    <div class = "general-row">
 
-    <input type="hidden" name="_method" value="post">
+        <div class = "general-form">
 
-    <input type="text" name="text_response" placeholder="Search for a gif">
+            <h2 class="search-terms">Search fo a gif that describes woof ya think about dis <%= @subject.category.singularize.downcase %></h2>
 
-    <input type="submit" value= "Search GIF">
+            <form action = "/subjects/<%= params[:subject_id] %>/reviews/new/2" class = "form-inline" method = "post">
 
-</form>
+                <input type="hidden" name="_method" value="post">
 
+                <input type="text" name="text_response" placeholder="Search fo any gif (Use real English)" class ="form-control" style="width: 30vw; font-size: 1.25em;">
 
-<% if @gif != nil %>
+                <br><br>
 
-    <%= image_tag @gif %>
+                <button type="submit" class="btn btn-primary btn-md" style="width: 30vw;"><span class='glyphicon glyphicon-search'></button>
 
-    <form action = "/subjects/<%= params[:subject_id] %>/reviews" method = "post">
+            </form>
 
-        <input type="hidden" name="_method" value="post">
+            <% if @gif != nil %>
 
-        <input type="hidden" name="review[text_response]" value="<%= @text_response %>">
-        <input type="hidden" name="review[gif_response]" value="<%= @gif %>">
-        <input type="hidden" name="review[subject_id]" value = "<%= params[:subject_id].to_s %>">
-        <input type="hidden" name="review[user_id]" value = "<%= current_user.id.to_s %>">
+                <br><br>
+                <br><br>
 
-        Are you happy with the gif?
+                <%= image_tag @gif, style: "max-width: 800px" %>
 
-        <input type="submit" value="Yes, submit as my review">
+                <form action = "/subjects/<%= params[:subject_id] %>/reviews" method = "post">
 
-    </form>
+                    <input type="hidden" name="_method" value="post">
 
-<% end %>
+                    <input type="hidden" name="review[text_response]" value="<%= @text_response %>">
+                    <input type="hidden" name="review[gif_response]" value="<%= @gif %>">
+                    <input type="hidden" name="review[subject_id]" value = "<%= params[:subject_id].to_s %>">
+                    <input type="hidden" name="review[user_id]" value = "<%= current_user.id.to_s %>">
+
+                    <h3 class="search-result">Is dis gif accurate of how you feel?</h3><br>
+
+                    <input type="submit" value="Yaas submit it as ma review" class="btn btn-primary btn-md">
+
+                </form>
+
+            <% end %>
+
+            <br>
+
+        </div>
+
+    </div>
+
+</div>

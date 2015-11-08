@@ -1,48 +1,78 @@
-<h2>Sign up</h2>
+<div class = "container-fluid">
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
-  <%= devise_error_messages! %>
+    <div class = "general-row">
 
-  <div class="field">
-    <%= f.text_field :first_name, placeholder: "First Name" %>
+        <div class = "general-form">
+
+          <h2>Sign up Meow.</h2>
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true, class: "form-inline" }) do |f| %>
+            <%= devise_error_messages! %>
+
+            <div class="form-group">
+              <%= f.text_field :first_name, placeholder: "* First Name", class: 'form-control', style: "width: 30vw;" %>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+              <%= f.text_field :location, placeholder: "* Location", class: 'form-control', style: "width: 30vw;" %>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+              <%= f.email_field :email, autofocus: true, placeholder: "* Email", class: 'form-control', style: "width: 30vw;" %>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+              <%= f.password_field :password, placeholder: "* Password (8 characters min)", autocomplete: "off", class: 'form-control', style: "width: 30vw;" %>
+            </div>
+
+            <br><br>
+
+            <div class="form-group">
+              <%= f.password_field :password_confirmation, placeholder: "* Confirm Password", autocomplete: "off", class: 'form-control', style: "width: 30vw;" %>
+            </div>
+
+            <br><br>
+
+            <div class = "form-group">
+
+              <%= f.label "Upload Your Photo" %>
+              <%= f.file_field :avatar %>
+
+            </div>
+
+            <br>
+
+            <%= f.hidden_field :avatar_cache %>
+
+            <br><br>
+
+            <input type="checkbox" style="width: 10px; transform: scale(2); -webkit-transform: scale(2);">
+            <%= f.label "I'm not a human", style: "padding-left: 20px; font-size: 1.25em;" %>
+
+            <br><br>
+
+            <div class="actions">
+              <%= f.submit "Sign up", class: "btn btn-primary btn-md" %>
+            </div>
+
+          <% end %>
+
+          <div class = "signin-link">
+
+            <p>Already have an account?</p>
+            <%= link_to "Log In", new_user_session_path %>
+
+          </div>
+
+    </div>
+
   </div>
 
-  <div class="field">
-    <%= f.text_field :location, placeholder: "Location" %>
-  </div>
-
-  <div class="field">
-    <%= f.text_field :avatar, placeholder: "avatar" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class = "field">
-  <%= f.file_field :avatar %>
-  </div>
-
-  <%= f.hidden_field :avatar_cache %>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
 

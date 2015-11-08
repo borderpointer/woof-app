@@ -1,53 +1,57 @@
-<div class = "general-row">
+<div class = "container-fluid">
 
-    <div class = "general-form">
+    <div class = "general-row">
 
-        <h2>What Do You Want To Review?</h2>
+        <div class = "general-form">
 
-        <%= form_for @subject, :html => {:class => "form-inline"} do |f|%>
+            <h2>What Do You Want To Review?</h2>
 
-            <div class="form-group">
+            <%= form_for @subject, :html => {:class => "form-inline"} do |f|%>
 
-              <%= f.text_field :name, class: 'form-control', placeholder: "Name" %>
+                <div class="form-group">
 
-            </div>
+                  <%= f.text_field :name, class: 'form-control', placeholder: "* Name", style: "width: 30vw;" %>
 
-            <br><br>
+                </div>
 
-            <div class="form-group">
+                <br><br>
 
-              <%= f.select :category, options_for_select(@category, selected = "Parks"), {:include_blank => "All"}, { :class => 'form-control' } %>
+                <div class="form-group">
 
-            </div>
+                  <%= f.select :category, options_for_select(@category, selected = "Parks"), {:include_blank => "All"}, class: 'form-control', style: "width: 30vw;" %>
 
-            <br><br>
+                </div>
 
-            <div class="form-group">
+                <br><br>
 
-              <%= f.text_field :address, class: 'form-control', placeholder: "Address, if any" %>
+                <div class="form-group">
 
-            </div>
+                  <%= f.text_field :address, class: 'form-control', placeholder: "Address, if any", style: "width: 30vw;" %>
 
-            <br><br>
+                </div>
 
-            <div class="form-group">
+                <br><br>
 
-              <%= f.text_field :photo, class: 'form-control', placeholder: "Photo URL" %>
+                <div class="form-group">
 
-            </div>
+                  <%= f.text_field :photo, class: 'form-control', placeholder: "* Photo URL", style: "width: 30vw;" %>
 
-            <br><br>
+                </div>
 
-            <br><br>
+                <br><br>
 
-            <div class="actions">
+                <br><br>
 
-                <%= f.submit "Create", :class => "btn btn-primary btn-md" %>
+                <div class="actions">
 
-            </div>
+                    <%= f.submit "Create", :class => "btn btn-primary btn-md" %>
+
+                </div>
 
 
-        <% end %>
+            <% end %>
+
+        </div>
 
     </div>
 
