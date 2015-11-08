@@ -13,7 +13,7 @@
 * Fog
 * HTTParty
 
-== APIs Used:
+=== APIs Used:
 
 * Giphy
 * Google Cloud Storage
