@@ -32,8 +32,7 @@ gem 'devise'
 
 # File uploader
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
-gem 'mini_magick'
-gem "fog"
+gem "fog", require: 'fog/google'
 
 # for using Giphy's API
 gem 'httparty'

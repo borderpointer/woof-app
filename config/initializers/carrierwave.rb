@@ -6,7 +6,7 @@ CarrierWave.configure do |config|
 
   else
 
-    config.storage = :fog
+    config.fog_provider = 'fog-google'
 
     config.fog_credentials = {
 
