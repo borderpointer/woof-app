@@ -45,43 +45,43 @@ user_6 = User.create(email: "bico@me.com", encrypted_password: "$2a$10$5fMukWPQG
 # Reviews: Built manually to alter their id numbers (based on existing data that was made in dev mode)
 
 review_1 = Review.create(gif_response: "http://media0.giphy.com/media/12wKTpXBvyXRgA/giphy.gif", user_id: nil, subject_id: nil, text_response: "amazing!")
-reivew_1.user << user_1
-review_2 = Review.create(gif_response: "http://media2.giphy.com/media/aIfWL4BhK1AD6/giphy.gif", user_id: 2, subject_id: 5, text_response: "it sucks!")
+review_1.user << user_1
+# review_2 = Review.create(gif_response: "http://media2.giphy.com/media/aIfWL4BhK1AD6/giphy.gif", user_id: 2, subject_id: 5, text_response: "it sucks!")
 
-review_3 = Review.create(gif_response: "http://media0.giphy.com/media/2dQ3FMaMFccpi/giphy.gif", user_id: 1, subject_id: 6, text_response: "Luv this")
+# review_3 = Review.create(gif_response: "http://media0.giphy.com/media/2dQ3FMaMFccpi/giphy.gif", user_id: 1, subject_id: 6, text_response: "Luv this")
 
-review_4 = Review.create(gif_response: "http://media1.giphy.com/media/E2MeuITk1M4pi/giphy.gif", user_id: 3, subject_id: 6, text_response: "this is the best")
+# review_4 = Review.create(gif_response: "http://media1.giphy.com/media/E2MeuITk1M4pi/giphy.gif", user_id: 3, subject_id: 6, text_response: "this is the best")
 
-review_5 = Review.create(gif_response: "http://media1.giphy.com/media/GfAD7Bl016Gfm/giphy.gif", user_id: 2, subject_id: 6, text_response: "ugh")
+# review_5 = Review.create(gif_response: "http://media1.giphy.com/media/GfAD7Bl016Gfm/giphy.gif", user_id: 2, subject_id: 6, text_response: "ugh")
 
-review_6 = Review.create(gif_response: "http://media2.giphy.com/media/vhZTTDmz4rLKo/giphy.gif", user_id: 4, subject_id: 6, text_response: "dont know how to use")
+# review_6 = Review.create(gif_response: "http://media2.giphy.com/media/vhZTTDmz4rLKo/giphy.gif", user_id: 4, subject_id: 6, text_response: "dont know how to use")
 
-review_7 = Review.create(gif_response: "http://media2.giphy.com/media/CcNDADuaWhXdm/giphy.gif", user_id: 5, subject_id: 6, text_response: "wut?")
+# review_7 = Review.create(gif_response: "http://media2.giphy.com/media/CcNDADuaWhXdm/giphy.gif", user_id: 5, subject_id: 6, text_response: "wut?")
 
-review_8 = Review.create(gif_response: "http://media2.giphy.com/media/4uYDcwTVujCak/giphy.gif", user_id: 2, subject_id: 3, text_response: "wut is this")
+# review_8 = Review.create(gif_response: "http://media2.giphy.com/media/4uYDcwTVujCak/giphy.gif", user_id: 2, subject_id: 3, text_response: "wut is this")
 
-review_9 = Review.create(gif_response: "http://media2.giphy.com/media/y8Mz1yj13s3kI/giphy.gif", user_id: 1, subject_id: 3, text_response: "great!")
+# review_9 = Review.create(gif_response: "http://media2.giphy.com/media/y8Mz1yj13s3kI/giphy.gif", user_id: 1, subject_id: 3, text_response: "great!")
 
-review_10 = Review.create(gif_response: "http://media0.giphy.com/media/LXPpKhREkezN6/giphy.gif", user_id: 1, subject_id: 7, text_response: "Never been")
+# review_10 = Review.create(gif_response: "http://media0.giphy.com/media/LXPpKhREkezN6/giphy.gif", user_id: 1, subject_id: 7, text_response: "Never been")
 
-review_11 = Review.create(gif_response: "http://media1.giphy.com/media/ZOln4JxCoZay4/giphy.gif", user_id: 1, subject_id: 1, text_response: "luv luv luv")
+# review_11 = Review.create(gif_response: "http://media1.giphy.com/media/ZOln4JxCoZay4/giphy.gif", user_id: 1, subject_id: 1, text_response: "luv luv luv")
 
-review_12 = Review.create(gif_response: "http://media1.giphy.com/media/ke1KJom7MkYcE/giphy.gif", user_id: 1, subject_id: 4, text_response: "blaaa")
+# review_12 = Review.create(gif_response: "http://media1.giphy.com/media/ke1KJom7MkYcE/giphy.gif", user_id: 1, subject_id: 4, text_response: "blaaa")
 
-review_13 = Review.create(gif_response: "http://media4.giphy.com/media/hZj44bR9FVI3K/giphy.gif", user_id: 1, subject_id: 2, text_response: "Yay!")
+# review_13 = Review.create(gif_response: "http://media4.giphy.com/media/hZj44bR9FVI3K/giphy.gif", user_id: 1, subject_id: 2, text_response: "Yay!")
 
-review_14 = Review.create(gif_response: "http://media0.giphy.com/media/12zfAjyQ3RZNSw/giphy.gif", user_id: 1, subject_id: 8, text_response: "yum")
+# review_14 = Review.create(gif_response: "http://media0.giphy.com/media/12zfAjyQ3RZNSw/giphy.gif", user_id: 1, subject_id: 8, text_response: "yum")
 
-review_15 = Review.create(gif_response: "http://media4.giphy.com/media/LwbPCgvhn79Be/giphy.gif", user_id: 1, subject_id: 10, text_response: "mine")
+# review_15 = Review.create(gif_response: "http://media4.giphy.com/media/LwbPCgvhn79Be/giphy.gif", user_id: 1, subject_id: 10, text_response: "mine")
 
-review_16 = Review.create(gif_response: "http://media3.giphy.com/media/eobmgPFdmj7oI/giphy.gif", user_id: 1, subject_id: 9, text_response: "squeaky")
+# review_16 = Review.create(gif_response: "http://media3.giphy.com/media/eobmgPFdmj7oI/giphy.gif", user_id: 1, subject_id: 9, text_response: "squeaky")
 
-review_17 = Review.create(gif_response: "http://media1.giphy.com/media/b21leMwlDYLyo/giphy.gif", user_id: 1, subject_id: 11, text_response: "delicious")
+# review_17 = Review.create(gif_response: "http://media1.giphy.com/media/b21leMwlDYLyo/giphy.gif", user_id: 1, subject_id: 11, text_response: "delicious")
 
-review_18 = Review.create(gif_response: "http://media0.giphy.com/media/yVsYYzEOX3YxW/giphy.gif", user_id: 6, subject_id: 6, text_response: "yay")
+# review_18 = Review.create(gif_response: "http://media0.giphy.com/media/yVsYYzEOX3YxW/giphy.gif", user_id: 6, subject_id: 6, text_response: "yay")
 
-review_19 = Review.create(gif_response: "http://media1.giphy.com/media/GYx3rLjdBPfyM/giphy.gif", user_id: 6, subject_id: 8, text_response: "yessss")
+# review_19 = Review.create(gif_response: "http://media1.giphy.com/media/GYx3rLjdBPfyM/giphy.gif", user_id: 6, subject_id: 8, text_response: "yessss")
 
-review_20 = Review.create(gif_response: "http://media3.giphy.com/media/SXcgjAPQnWOhW/giphy.gif", user_id: 6, subject_id: 4, text_response: "never")
+# review_20 = Review.create(gif_response: "http://media3.giphy.com/media/SXcgjAPQnWOhW/giphy.gif", user_id: 6, subject_id: 4, text_response: "never")
 
-review_21 = Review.create(gif_response: "http://media1.giphy.com/media/IYyn46tl55Yyc/giphy.gif", user_id: 6, subject_id: 10, text_response: "yas")
+# review_21 = Review.create(gif_response: "http://media1.giphy.com/media/IYyn46tl55Yyc/giphy.gif", user_id: 6, subject_id: 10, text_response: "yas")
