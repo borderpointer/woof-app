@@ -29,7 +29,7 @@ I wanted to build a fun app.
 
 === Model Structure
 
-![description](http://full/path/to/erd.jpg)
+![description]('http://full/path/to/erd.jpg')
 
 === Installation
 
