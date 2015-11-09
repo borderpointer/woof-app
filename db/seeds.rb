@@ -44,8 +44,8 @@ user_6 = User.create(email: "bico@me.com", encrypted_password: "$2a$10$5fMukWPQG
 
 # Reviews: Built manually to alter their id numbers (based on existing data that was made in dev mode)
 
-review_1 = Review.create(gif_response: "http://media0.giphy.com/media/12wKTpXBvyXRgA/giphy.gif", user_id: 1, subject_id: 5, text_response: "amazing!")
-
+review_1 = Review.create(gif_response: "http://media0.giphy.com/media/12wKTpXBvyXRgA/giphy.gif", user_id: nil, subject_id: nil, text_response: "amazing!")
+reivew_1.user << user_1
 review_2 = Review.create(gif_response: "http://media2.giphy.com/media/aIfWL4BhK1AD6/giphy.gif", user_id: 2, subject_id: 5, text_response: "it sucks!")
 
 review_3 = Review.create(gif_response: "http://media0.giphy.com/media/2dQ3FMaMFccpi/giphy.gif", user_id: 1, subject_id: 6, text_response: "Luv this")
