@@ -4,7 +4,8 @@ subject_1 = Subject.create(name: "Central Park", category: "Parks", address: "Ce
 
 subject_2 = Subject.create(name: "Riverside Park", category: "Parks", address: "105th St and Riverside Dr., New York, NY 10025", photo: "http://bit.ly/1MJ1Bp3")
 
-subject_4 = Subject.create(name: "Blue Buffalo Wilderness Salmon Recipe", category: "Food", address: nil, photo: "http://bit.ly/1ku0rRk").update_attribute(:id, 4)
+subject_4 = Subject.create(name: "Blue Buffalo Wilderness Salmon Recipe", category: "Food", address: nil, photo: "http://bit.ly/1ku0rRk")
+subject_4.update_attribute(:id, 4)
 
 subject_5 = Subject.create(name: "Washington Square Park", category: "Parks", address: "1 Washington Square E, New York, NY 10011", photo: "http://bit.ly/20vepn1").update_column(:id, 5)
 
