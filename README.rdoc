@@ -26,6 +26,11 @@ Woof is the Yelp for dogs, where users can write reviews of all things related t
 
 I wanted to build a fun app.
 
+
+=== Model Structure
+
+![description](http://full/path/to/erd.jpg)
+
 === Installation
 
 Demo coming soon.
