@@ -1,4 +1,6 @@
-# Subjects: Built manually to alter their id numbers (based on existing data that was made in dev mode)
+## NOTE:
+
+# This seeds' id numbers are different from the dev mod's data. Don't run when on dev.
 
 subject_1 = Subject.create(name: "Central Park", category: "Parks", address: "Central Park Gr Hill, New York, NY 10025", photo: "http://bit.ly/1LQA5SZ")
 
