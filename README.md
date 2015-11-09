@@ -29,7 +29,7 @@ I wanted to build a fun app.
 
 ### Model Structure
 
-![erd](http://full/path/to/erd.jpg)
+![erd](woof_app/app/assets/images/erd.jpg)
 
 ### Installation
 
