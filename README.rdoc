@@ -20,7 +20,7 @@
 
 === Synopsis
 
-Woof is the Yelp for dogs, where users can review all things related to dogs with gifs.
+Woof is the Yelp for dogs, where users can write reviews of all things related to dogs with gifs.
 
 === Motivation
 
