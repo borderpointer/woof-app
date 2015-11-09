@@ -1,51 +1,53 @@
-## NOTE:
+# ####### NOTE: ########
 
-# This seeds' id numbers are different from the dev mod's data. Don't run when on dev.
+# # DON'T SEED EVER
 
-subject_1 = Subject.create(name: "Central Park", category: "Parks", address: "Central Park Gr Hill, New York, NY 10025", photo: "http://bit.ly/1LQA5SZ")
+########################
 
-subject_2 = Subject.create(name: "Riverside Park", category: "Parks", address: "105th St and Riverside Dr., New York, NY 10025", photo: "http://bit.ly/1MJ1Bp3")
+# subject_1 = Subject.create(name: "Central Park", category: "Parks", address: "Central Park Gr Hill, New York, NY 10025", photo: "http://bit.ly/1LQA5SZ")
 
-subject_3 = Subject.create(name: "Blue Buffalo Wilderness Salmon Recipe", category: "Food", address: nil, photo: "http://bit.ly/1ku0rRk")
+# subject_2 = Subject.create(name: "Riverside Park", category: "Parks", address: "105th St and Riverside Dr., New York, NY 10025", photo: "http://bit.ly/1MJ1Bp3")
 
-subject_4 = Subject.create(name: "Washington Square Park", category: "Parks", address: "1 Washington Square E, New York, NY 10011", photo: "http://bit.ly/20vepn1")
+# subject_3 = Subject.create(name: "Blue Buffalo Wilderness Salmon Recipe", category: "Food", address: nil, photo: "http://bit.ly/1ku0rRk")
 
-subject_5 = Subject.create(name: "Zuke's Hip Action Roasted Beef Recipe", category: "Food", address: nil, photo: "http://bit.ly/1kbOgt7")
+# subject_4 = Subject.create(name: "Washington Square Park", category: "Parks", address: "1 Washington Square E, New York, NY 10011", photo: "http://bit.ly/20vepn1")
 
-subject_6 = Subject.create(name: "Jawz Hyperflite Frisbee", category: "Toys", address: nil, photo: "jawz-hyperflite.jpg")
+# subject_5 = Subject.create(name: "Zuke's Hip Action Roasted Beef Recipe", category: "Food", address: nil, photo: "http://bit.ly/1kbOgt7")
 
-subject_7 = Subject.create(name: "Tompkins Square Park", category: "Parks", address: "500 E 10th St, New York, NY 10009", photo: "http://on.nyc.gov/1XWu3Wi")
+# subject_6 = Subject.create(name: "Jawz Hyperflite Frisbee", category: "Toys", address: nil, photo: "jawz-hyperflite.jpg")
 
-subject_8 = Subject.create(name: "Halo Liv-a-Littles Salmon", category: "Food", address: nil, photo: "http://bit.ly/1L3pIas")
+# subject_7 = Subject.create(name: "Tompkins Square Park", category: "Parks", address: "500 E 10th St, New York, NY 10009", photo: "http://on.nyc.gov/1XWu3Wi")
 
-subject_9 = Subject.create(name: "Kong AirDog Squeakair Ball", category: "Toys", address: nil, photo: "http://bit.ly/1Ow0IQU")
+# subject_8 = Subject.create(name: "Halo Liv-a-Littles Salmon", category: "Food", address: nil, photo: "http://bit.ly/1L3pIas")
 
-subject_10 = Subject.create(name: "Kong Wild Knots RopeBird", category: "Toys", address: nil, photo: "http://bit.ly/1MhNCko")
+# subject_9 = Subject.create(name: "Kong AirDog Squeakair Ball", category: "Toys", address: nil, photo: "http://bit.ly/1Ow0IQU")
 
-subject_11 = Subject.create(name: "GREENIES Dental Chews", category: "Food", address: nil, photo: "http://bit.ly/1LZneht")
+# subject_10 = Subject.create(name: "Kong Wild Knots RopeBird", category: "Toys", address: nil, photo: "http://bit.ly/1MhNCko")
 
-
-# Users: Built manually to alter their id numbers (based on existing data that was made in dev mode)
-
-
-user_1 = User.create(email: "zhora@me.com", encrypted_password: "$2a$10$Aw4FzE498S5HqOz9qyeNcuZCRkoPB1XheS6V.yjStL56Y91fdpPDm", first_name: "Zhora", location: "New York, NY", avatar: "zhora.jpg")
-
-user_2 = User.create(email: "pris@me.com", encrypted_password: "$2a$10$8MuEyVbSc42isMtaDtCEvOcMOMmWdTYM2xVEek.8bmpkQ0Wy09UbC", first_name: "Pris", location: "New York, NY", avatar: "pris.jpg")
-
-user_3 = User.create(email: "carrie@me.com", encrypted_password: "$2a$10$CJiiencnv9IJTEjbmsRJh.DftJ9zphMImSW9DThrF00MAyMkTF/x.", first_name: "Carrie", location: "New York, NY", avatar: "Slack_for_iOS_Upload.jpg")
-
-user_4 = User.create(email: "boo@me.com", encrypted_password: "$2a$10$85rC.GwaHEwJB72FyN2u5u4zXF6b3cfZmZJ4wyA4cTQjozsYlg.au", first_name: "Boo", location: "New York, NY", avatar: "boo.jpg")
-
-user_5 = User.create(email: "tuna@me.com", encrypted_password: "$2a$10$2HSkOFGEvc5yBboRHOSK9uj7asCigRcfqXCDH549mlK2ybbsYT31e", first_name: "Tuna", location: "New York, NY", avatar: "tuna.jpg")
-
-user_6 = User.create(email: "bico@me.com", encrypted_password: "$2a$10$5fMukWPQGtIoATpJ/Q7bneWbw5w.r8IB6/q98XP4JsEqHtaDWFn3y", first_name: "Bico", location: "New York, NY", avatar: "bico.jpg")
+# subject_11 = Subject.create(name: "GREENIES Dental Chews", category: "Food", address: nil, photo: "http://bit.ly/1LZneht")
 
 
+# # Users: Built manually to alter their id numbers (based on existing data that was made in dev mode)
 
-# Reviews: Built manually to alter their id numbers (based on existing data that was made in dev mode)
 
-review_1 = Review.create(gif_response: "http://media0.giphy.com/media/12wKTpXBvyXRgA/giphy.gif", text_response: "amazing!")
-review_1.user << user_1
+# user_1 = User.create(email: "zhora@me.com", encrypted_password: "$2a$10$Aw4FzE498S5HqOz9qyeNcuZCRkoPB1XheS6V.yjStL56Y91fdpPDm", first_name: "Zhora", location: "New York, NY", avatar: "zhora.jpg")
+
+# user_2 = User.create(email: "pris@me.com", encrypted_password: "$2a$10$8MuEyVbSc42isMtaDtCEvOcMOMmWdTYM2xVEek.8bmpkQ0Wy09UbC", first_name: "Pris", location: "New York, NY", avatar: "pris.jpg")
+
+# user_3 = User.create(email: "carrie@me.com", encrypted_password: "$2a$10$CJiiencnv9IJTEjbmsRJh.DftJ9zphMImSW9DThrF00MAyMkTF/x.", first_name: "Carrie", location: "New York, NY", avatar: "Slack_for_iOS_Upload.jpg")
+
+# user_4 = User.create(email: "boo@me.com", encrypted_password: "$2a$10$85rC.GwaHEwJB72FyN2u5u4zXF6b3cfZmZJ4wyA4cTQjozsYlg.au", first_name: "Boo", location: "New York, NY", avatar: "boo.jpg")
+
+# user_5 = User.create(email: "tuna@me.com", encrypted_password: "$2a$10$2HSkOFGEvc5yBboRHOSK9uj7asCigRcfqXCDH549mlK2ybbsYT31e", first_name: "Tuna", location: "New York, NY", avatar: "tuna.jpg")
+
+# user_6 = User.create(email: "bico@me.com", encrypted_password: "$2a$10$5fMukWPQGtIoATpJ/Q7bneWbw5w.r8IB6/q98XP4JsEqHtaDWFn3y", first_name: "Bico", location: "New York, NY", avatar: "bico.jpg")
+
+
+
+# # Reviews: Built manually to alter their id numbers (based on existing data that was made in dev mode)
+
+# review_1 = Review.create(gif_response: "http://media0.giphy.com/media/12wKTpXBvyXRgA/giphy.gif", user_id: 1, subject_id: 5, text_response: "amazing!")
+
 # review_2 = Review.create(gif_response: "http://media2.giphy.com/media/aIfWL4BhK1AD6/giphy.gif", user_id: 2, subject_id: 5, text_response: "it sucks!")
 
 # review_3 = Review.create(gif_response: "http://media0.giphy.com/media/2dQ3FMaMFccpi/giphy.gif", user_id: 1, subject_id: 6, text_response: "Luv this")
