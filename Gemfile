@@ -32,10 +32,8 @@ gem 'devise'
 
 # File uploader
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
-gem 'fog'
-gem 'fog-google'
 
-gem 'figaro'
+gem "fog-aws"
 
 # for using Giphy's API
 gem 'httparty'

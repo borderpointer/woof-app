@@ -1,0 +1,11 @@
+default: &default
+  cloud_storage:
+    bucket: woofwoof
+    access_key_id: <%= ENV["GCS_ACCESS_KEY"] %>
+    secret_access_key: <%= ENV["GCS_SECRET"] %>
+
+development:
+  <<: *default
+
+production:
+  <<: *default

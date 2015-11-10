@@ -4,6 +4,7 @@
 
 - Rails
 
+
 ### Gems Used:
 
 - Postgresql
@@ -13,14 +14,17 @@
 - Fog
 - HTTParty
 
+
 ### APIs Used:
 
 - Giphy
-- Google Cloud Storage
+- Amazon S3
+
 
 ### Synopsis
 
 Woof is the Yelp for dogs, where users can write reviews of all things related to dogs with gifs.
+
 
 ### Motivation
 
@@ -31,9 +35,13 @@ I wanted to build a fun app.
 
 ![erd](/app/assets/images/erd.jpg)
 
+
 ### Installation
 
-Demo coming soon.
+Beta available: [here](http://woof-app.herokuapp.com/)
+
+- Currently, users cannot upload their avatars.
+
 
 ### Unsolved Problems
 

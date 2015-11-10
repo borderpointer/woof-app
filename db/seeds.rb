@@ -1,30 +1,30 @@
 # ####### NOTE: ########
 
-# # DON'T SEED EVER
+# DO NOT uncomment the other seeds listed here (Only the subjects should be made.)
 
 ########################
 
-# subject_1 = Subject.create(name: "Central Park", category: "Parks", address: "Central Park Gr Hill, New York, NY 10025", photo: "http://bit.ly/1LQA5SZ")
+subject_1 = Subject.create(name: "Central Park", category: "Parks", address: "Central Park Gr Hill, New York, NY 10025", photo: "http://bit.ly/1LQA5SZ")
 
-# subject_2 = Subject.create(name: "Riverside Park", category: "Parks", address: "105th St and Riverside Dr., New York, NY 10025", photo: "http://bit.ly/1MJ1Bp3")
+subject_2 = Subject.create(name: "Riverside Park", category: "Parks", address: "105th St and Riverside Dr., New York, NY 10025", photo: "http://bit.ly/1MJ1Bp3")
 
-# subject_3 = Subject.create(name: "Blue Buffalo Wilderness Salmon Recipe", category: "Food", address: nil, photo: "http://bit.ly/1ku0rRk")
+subject_3 = Subject.create(name: "Blue Buffalo Wilderness Salmon Recipe", category: "Food", address: nil, photo: "http://bit.ly/1ku0rRk")
 
-# subject_4 = Subject.create(name: "Washington Square Park", category: "Parks", address: "1 Washington Square E, New York, NY 10011", photo: "http://bit.ly/20vepn1")
+subject_4 = Subject.create(name: "Washington Square Park", category: "Parks", address: "1 Washington Square E, New York, NY 10011", photo: "http://bit.ly/20vepn1")
 
-# subject_5 = Subject.create(name: "Zuke's Hip Action Roasted Beef Recipe", category: "Food", address: nil, photo: "http://bit.ly/1kbOgt7")
+subject_5 = Subject.create(name: "Zuke's Hip Action Roasted Beef Recipe", category: "Food", address: nil, photo: "http://bit.ly/1kbOgt7")
 
-# subject_6 = Subject.create(name: "Jawz Hyperflite Frisbee", category: "Toys", address: nil, photo: "jawz-hyperflite.jpg")
+subject_6 = Subject.create(name: "Jawz Hyperflite Frisbee", category: "Toys", address: nil, photo: "jawz-hyperflite.jpg")
 
-# subject_7 = Subject.create(name: "Tompkins Square Park", category: "Parks", address: "500 E 10th St, New York, NY 10009", photo: "http://on.nyc.gov/1XWu3Wi")
+subject_7 = Subject.create(name: "Tompkins Square Park", category: "Parks", address: "500 E 10th St, New York, NY 10009", photo: "http://on.nyc.gov/1XWu3Wi")
 
-# subject_8 = Subject.create(name: "Halo Liv-a-Littles Salmon", category: "Food", address: nil, photo: "http://bit.ly/1L3pIas")
+subject_8 = Subject.create(name: "Halo Liv-a-Littles Salmon", category: "Food", address: nil, photo: "http://bit.ly/1L3pIas")
 
-# subject_9 = Subject.create(name: "Kong AirDog Squeakair Ball", category: "Toys", address: nil, photo: "http://bit.ly/1Ow0IQU")
+subject_9 = Subject.create(name: "Kong AirDog Squeakair Ball", category: "Toys", address: nil, photo: "http://bit.ly/1Ow0IQU")
 
-# subject_10 = Subject.create(name: "Kong Wild Knots RopeBird", category: "Toys", address: nil, photo: "http://bit.ly/1MhNCko")
+subject_10 = Subject.create(name: "Kong Wild Knots RopeBird", category: "Toys", address: nil, photo: "http://bit.ly/1MhNCko")
 
-# subject_11 = Subject.create(name: "GREENIES Dental Chews", category: "Food", address: nil, photo: "http://bit.ly/1LZneht")
+subject_11 = Subject.create(name: "GREENIES Dental Chews", category: "Food", address: nil, photo: "http://bit.ly/1LZneht")
 
 
 # # Users: Built manually to alter their id numbers (based on existing data that was made in dev mode)
