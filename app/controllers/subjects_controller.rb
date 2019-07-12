@@ -5,6 +5,7 @@ class SubjectsController < ApplicationController
   def index
 
     @subjects = Subject.order('category DESC')
+    @featured_subject = Subject.find_by_name('Jawz Hyperflite Frisbee')
 
   end
 
