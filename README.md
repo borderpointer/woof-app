@@ -1,5 +1,9 @@
 # Woof
 
+### Demo Login:
+- email: elli@test.com
+- password: password
+
 ### Built With:
 
 - Rails
