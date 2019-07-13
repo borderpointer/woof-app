@@ -1,6 +1,6 @@
 # Woof
 
-### Demo Login:
+### Test User Login:
 - email: elli@test.com
 - password: password
 
